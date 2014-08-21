@@ -17,42 +17,25 @@
 <div class="main">
   <div class="wrap">
     <div class="section group">
-      <div class="listview_1_of_3 images_1_of_3 event_grid">
-        <a href="events.html">
-          <div class="listimg listimg_1_of_2">
-            <%= image_tag "event_1.jpg" , :alt=>"" %>
+      <% @events.each_with_index do |event,index| %>
+          <div class="listview_1_of_3 images_1_of_3 event_grid">
+            <a href="events.html">
+              <div class="listimg listimg_1_of_2">
+                <%= image_tag(event.picture.url(:medium), :alt=>"") %>
+              </div>
+              <div class="text list_1_of_2">
+                <div class="date">
+                  <figure><% tab=event.event_date.to_date.to_formatted_s(:short).split %>
+                    <span><%= tab[0]%></span> <%= tab[1] %>
+                  </figure>
+                </div>
+              </div>
+            </a>
           </div>
-          <div class="text list_1_of_2">
-            <div class="date">
-              <figure><span>02</span>January</figure>
-            </div>
-          </div></a>
-      </div>
-      <div class="listview_1_of_3 images_1_of_3 event_grid">
-        <a href="events.html">
-          <div class="listimg listimg_1_of_2">
-            <%= image_tag "event_2.jpg" , :alt=>"" %>
-          </div>
-          <div class="text list_1_of_2">
-            <div class="date">
-              <figure><span>14</span>March</figure>
-            </div>
-          </div>
-        </a>
-      </div>
-      <div class="listview_1_of_3 images_1_of_3 event_grid">
-        <a href="events.html">
-          <div class="listimg listimg_1_of_2">
-            <%= image_tag "event_3.jpg" , :alt=>"" %>
-          </div>
-          <div class="text list_1_of_2">
-            <div class="date">
-              <figure><span>18</span>March</figure>
-            </div>
-          </div>
-        </a>
-      </div>
+      <% end %>
+
     </div>
+
     <div class="content_bottom">
       <div class="section group">
         <div class="col_1_of_3 span_1_of_3 today_show">

@@ -73,6 +73,7 @@ class EventsController < ApplicationController
   # DELETE /events/1.json
   def destroy
     @event = Event.find(params[:id])
+    @event.picture=nil
     @event.destroy
 
     respond_to do |format|

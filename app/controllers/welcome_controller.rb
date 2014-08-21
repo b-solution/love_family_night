@@ -3,6 +3,6 @@ class WelcomeController < ApplicationController
     @events=Event.first(3)
   end
   def about
-
+    @events=Event.last(3)
   end
 end

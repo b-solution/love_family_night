@@ -20375,3 +20375,1535 @@ Served asset /logo.png - 304 Not Modified (0ms)
 
 Started GET "/assets/foot-icon.png" for 127.0.0.1 at 2014-08-21 14:29:12 +0100
 Served asset /foot-icon.png - 304 Not Modified (0ms)
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (13.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateEvents (20140821130225)
+Migrating to AddPictureColumnsToEvents (20140821133303)
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  ALTER TABLE "events" ADD "picture_file_name" varchar(255)
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "events" ADD "picture_content_type" varchar(255)[0m
+  [1m[35m (0.3ms)[0m  ALTER TABLE "events" ADD "picture_file_size" integer
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "events" ADD "picture_updated_at" datetime[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20140821133303')
+  [1m[36m (1036.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+
+
+Started GET "/events" for 127.0.0.1 at 2014-08-21 14:58:30 +0100
+Connecting to database specified by database.yml
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.1ms)[0m  [1mSELECT "events".* FROM "events" [0m
+  Rendered events/index.html.erb within layouts/application (41.4ms)
+Completed 200 OK in 279.4ms (Views: 191.9ms | ActiveRecord: 27.4ms)
+
+
+Started GET "/assets/events.css?body=1" for 127.0.0.1 at 2014-08-21 14:58:31 +0100
+Served asset /events.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-08-21 14:58:31 +0100
+Served asset /scaffolds.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/slider.css?body=1" for 127.0.0.1 at 2014-08-21 14:58:31 +0100
+Served asset /slider.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/swipebox.css?body=1" for 127.0.0.1 at 2014-08-21 14:58:31 +0100
+Served asset /swipebox.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-08-21 14:58:31 +0100
+Served asset /welcome.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2014-08-21 14:58:31 +0100
+Served asset /style.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-21 14:58:31 +0100
+Served asset /jquery.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-21 14:58:31 +0100
+Served asset /application.css - 304 Not Modified (9ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-21 14:58:31 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at 2014-08-21 14:58:31 +0100
+Served asset /events.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/ios-orientationchange-fix.js?body=1" for 127.0.0.1 at 2014-08-21 14:58:31 +0100
+Served asset /ios-orientationchange-fix.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery.nivo.slider.js?body=1" for 127.0.0.1 at 2014-08-21 14:58:31 +0100
+Served asset /jquery.nivo.slider.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery.swipebox.min.js?body=1" for 127.0.0.1 at 2014-08-21 14:58:31 +0100
+Served asset /jquery.swipebox.min.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-08-21 14:58:31 +0100
+Served asset /welcome.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-21 14:58:31 +0100
+Served asset /application.js - 304 Not Modified (13ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2014-08-21 14:58:31 +0100
+Served asset /logo.png - 304 Not Modified (14ms)
+
+
+Started GET "/assets/f-icon.png" for 127.0.0.1 at 2014-08-21 14:58:31 +0100
+Served asset /f-icon.png - 304 Not Modified (7ms)
+
+
+Started GET "/images/medium/missing.png" for 127.0.0.1 at 2014-08-21 14:58:31 +0100
+
+ActionController::RoutingError (No route matches [GET] "/images/medium/missing.png"):
+  actionpack (3.2.17) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.17) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.17) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.17) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.17) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.17) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.17) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.17) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.17) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.17) lib/rails/engine.rb:484:in `call'
+  railties (3.2.17) lib/rails/application.rb:231:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.17) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /home/bilel/.rvm/rubies/ruby-1.9.3-p545/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /home/bilel/.rvm/rubies/ruby-1.9.3-p545/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /home/bilel/.rvm/rubies/ruby-1.9.3-p545/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /home/bilel/.rvm/gems/ruby-1.9.3-p545/gems/actionpack-3.2.17/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/assets/foot-icon.png" for 127.0.0.1 at 2014-08-21 14:58:31 +0100
+Served asset /foot-icon.png - 304 Not Modified (8ms)
+
+
+Started GET "/assets/fonts/CaviarDreams-webfont.ttf" for 127.0.0.1 at 2014-08-21 14:58:31 +0100
+Served asset /fonts/CaviarDreams-webfont.ttf - 200 OK (11ms)
+
+
+Started GET "/assets/images/bg.jpg" for 127.0.0.1 at 2014-08-21 14:58:31 +0100
+Served asset /images/bg.jpg - 200 OK (31ms)
+
+
+Started GET "/assets/images/marker.png" for 127.0.0.1 at 2014-08-21 14:58:31 +0100
+Served asset /images/marker.png - 200 OK (3ms)
+
+
+Started GET "/events/new" for 127.0.0.1 at 2014-08-21 14:58:37 +0100
+Processing by EventsController#new as HTML
+  Rendered events/_form.html.erb (133.6ms)
+  Rendered events/new.html.erb within layouts/application (242.3ms)
+Completed 500 Internal Server Error in 245.2ms
+
+ActionView::Template::Error (undefined method `file_field' for nil:NilClass):
+    24:     <%= f.datetime_select :event_date %>
+    25:   </div>
+    26:     <div class="field">
+    27:       <%= form.file_field :avatar %>
+    28:     </div>
+    29:   <div class="actions">
+    30:     <%= f.submit %>
+  app/views/events/_form.html.erb:27:in `block in _app_views_events__form_html_erb___657898948_92371110'
+  app/views/events/_form.html.erb:1:in `_app_views_events__form_html_erb___657898948_92371110'
+  app/views/events/new.html.erb:3:in `_app_views_events_new_html_erb___108635359_92007020'
+  app/controllers/events_controller.rb:29:in `new'
+
+
+  Rendered /home/bilel/.rvm/gems/ruby-1.9.3-p545/gems/actionpack-3.2.17/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+  Rendered /home/bilel/.rvm/gems/ruby-1.9.3-p545/gems/actionpack-3.2.17/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /home/bilel/.rvm/gems/ruby-1.9.3-p545/gems/actionpack-3.2.17/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (7.6ms)
+
+
+Started GET "/events/new" for 127.0.0.1 at 2014-08-21 14:59:00 +0100
+Processing by EventsController#new as HTML
+  Rendered events/_form.html.erb (6.9ms)
+  Rendered events/new.html.erb within layouts/application (8.1ms)
+Completed 200 OK in 45.5ms (Views: 44.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/events.css?body=1" for 127.0.0.1 at 2014-08-21 14:59:00 +0100
+Served asset /events.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-08-21 14:59:00 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/swipebox.css?body=1" for 127.0.0.1 at 2014-08-21 14:59:00 +0100
+Served asset /swipebox.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-21 14:59:00 +0100
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/slider.css?body=1" for 127.0.0.1 at 2014-08-21 14:59:00 +0100
+Served asset /slider.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2014-08-21 14:59:00 +0100
+Served asset /style.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-08-21 14:59:00 +0100
+Served asset /welcome.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-21 14:59:00 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-21 14:59:00 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at 2014-08-21 14:59:00 +0100
+Served asset /events.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ios-orientationchange-fix.js?body=1" for 127.0.0.1 at 2014-08-21 14:59:00 +0100
+Served asset /ios-orientationchange-fix.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.nivo.slider.js?body=1" for 127.0.0.1 at 2014-08-21 14:59:00 +0100
+Served asset /jquery.nivo.slider.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.swipebox.min.js?body=1" for 127.0.0.1 at 2014-08-21 14:59:00 +0100
+Served asset /jquery.swipebox.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-21 14:59:00 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-08-21 14:59:00 +0100
+Served asset /welcome.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2014-08-21 14:59:00 +0100
+Served asset /logo.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/f-icon.png" for 127.0.0.1 at 2014-08-21 14:59:00 +0100
+Served asset /f-icon.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foot-icon.png" for 127.0.0.1 at 2014-08-21 14:59:00 +0100
+Served asset /foot-icon.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/images/bg.jpg" for 127.0.0.1 at 2014-08-21 14:59:00 +0100
+Served asset /images/bg.jpg - 200 OK (0ms)
+
+
+Started GET "/assets/images/marker.png" for 127.0.0.1 at 2014-08-21 14:59:00 +0100
+Served asset /images/marker.png - 200 OK (0ms)
+
+
+Started GET "/assets/fonts/CaviarDreams-webfont.ttf" for 127.0.0.1 at 2014-08-21 14:59:00 +0100
+Served asset /fonts/CaviarDreams-webfont.ttf - 200 OK (0ms)
+
+
+Started POST "/events" for 127.0.0.1 at 2014-08-21 14:59:54 +0100
+Processing by EventsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"G8lnqxgWojeBcHhlUsqqtZKXXrAHPwbjkKeQcINIHjI=", "event"=>{"title"=>"tommy", "content"=>"kpjhop", "event_date(1i)"=>"2014", "event_date(2i)"=>"8", "event_date(3i)"=>"21", "event_date(4i)"=>"13", "event_date(5i)"=>"59", "avatar"=>#<ActionDispatch::Http::UploadedFile:0xb570a00c @original_filename="event-img4.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"event[avatar]\"; filename=\"event-img4.jpg\"\r\nContent-Type: image/jpeg\r\n", @tempfile=#<File:/tmp/RackMultipart20140821-13869-7qbkd6>>}, "commit"=>"Create Event"}
+Completed 500 Internal Server Error in 0.8ms
+
+ActiveModel::MassAssignmentSecurity::Error (Can't mass-assign protected attributes: avatar):
+  app/controllers/events_controller.rb:43:in `new'
+  app/controllers/events_controller.rb:43:in `create'
+
+
+  Rendered /home/bilel/.rvm/gems/ruby-1.9.3-p545/gems/actionpack-3.2.17/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+  Rendered /home/bilel/.rvm/gems/ruby-1.9.3-p545/gems/actionpack-3.2.17/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.2ms)
+  Rendered /home/bilel/.rvm/gems/ruby-1.9.3-p545/gems/actionpack-3.2.17/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (9.3ms)
+
+
+Started GET "/events/new" for 127.0.0.1 at 2014-08-21 15:00:28 +0100
+Processing by EventsController#new as HTML
+  Rendered events/_form.html.erb (9.3ms)
+  Rendered events/new.html.erb within layouts/application (10.4ms)
+Completed 200 OK in 19.2ms (Views: 18.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-21 15:00:28 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/slider.css?body=1" for 127.0.0.1 at 2014-08-21 15:00:28 +0100
+Served asset /slider.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/events.css?body=1" for 127.0.0.1 at 2014-08-21 15:00:28 +0100
+Served asset /events.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-08-21 15:00:28 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2014-08-21 15:00:28 +0100
+Served asset /style.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/swipebox.css?body=1" for 127.0.0.1 at 2014-08-21 15:00:28 +0100
+Served asset /swipebox.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-21 15:00:28 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-08-21 15:00:28 +0100
+Served asset /welcome.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-21 15:00:28 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at 2014-08-21 15:00:28 +0100
+Served asset /events.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ios-orientationchange-fix.js?body=1" for 127.0.0.1 at 2014-08-21 15:00:28 +0100
+Served asset /ios-orientationchange-fix.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.nivo.slider.js?body=1" for 127.0.0.1 at 2014-08-21 15:00:28 +0100
+Served asset /jquery.nivo.slider.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.swipebox.min.js?body=1" for 127.0.0.1 at 2014-08-21 15:00:28 +0100
+Served asset /jquery.swipebox.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-08-21 15:00:28 +0100
+Served asset /welcome.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-21 15:00:28 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2014-08-21 15:00:28 +0100
+Served asset /logo.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/f-icon.png" for 127.0.0.1 at 2014-08-21 15:00:28 +0100
+Served asset /f-icon.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foot-icon.png" for 127.0.0.1 at 2014-08-21 15:00:28 +0100
+Served asset /foot-icon.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/fonts/CaviarDreams-webfont.ttf" for 127.0.0.1 at 2014-08-21 15:00:28 +0100
+Served asset /fonts/CaviarDreams-webfont.ttf - 200 OK (0ms)
+
+
+Started GET "/assets/images/marker.png" for 127.0.0.1 at 2014-08-21 15:00:28 +0100
+Served asset /images/marker.png - 200 OK (0ms)
+
+
+Started GET "/assets/images/bg.jpg" for 127.0.0.1 at 2014-08-21 15:00:28 +0100
+Served asset /images/bg.jpg - 200 OK (0ms)
+
+
+Started POST "/events" for 127.0.0.1 at 2014-08-21 15:00:42 +0100
+Processing by EventsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"G8lnqxgWojeBcHhlUsqqtZKXXrAHPwbjkKeQcINIHjI=", "event"=>{"title"=>"tommy", "content"=>"qdfhqfh", "event_date(1i)"=>"2014", "event_date(2i)"=>"8", "event_date(3i)"=>"21", "event_date(4i)"=>"14", "event_date(5i)"=>"00", "picture"=>#<ActionDispatch::Http::UploadedFile:0xb0907d0 @original_filename="event-img4.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"event[picture]\"; filename=\"event-img4.jpg\"\r\nContent-Type: image/jpeg\r\n", @tempfile=#<File:/tmp/RackMultipart20140821-13869-ernw39>>}, "commit"=>"Create Event"}
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/event-img420140821-13869-y7m2vr.jpg[0]'
+Command :: identify -format %m '/tmp/event-img420140821-13869-y7m2vr.jpg[0]'
+Command :: identify -format %m '/tmp/event-img420140821-13869-y7m2vr.jpg[0]'
+Command :: identify -format %m '/tmp/event-img420140821-13869-y7m2vr.jpg[0]'
+Command :: convert '/tmp/event-img420140821-13869-y7m2vr.jpg[0]' -auto-orient -resize "300x300>" '/tmp/event-img420140821-13869-y7m2vr20140821-13869-xzhe8x'
+Command :: file -b --mime '/tmp/event-img420140821-13869-y7m2vr20140821-13869-xzhe8x'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/event-img420140821-13869-y7m2vr.jpg[0]'
+Command :: identify -format %m '/tmp/event-img420140821-13869-y7m2vr.jpg[0]'
+Command :: identify -format %m '/tmp/event-img420140821-13869-y7m2vr.jpg[0]'
+Command :: identify -format %m '/tmp/event-img420140821-13869-y7m2vr.jpg[0]'
+Command :: convert '/tmp/event-img420140821-13869-y7m2vr.jpg[0]' -auto-orient -resize "100x100>" '/tmp/event-img420140821-13869-y7m2vr20140821-13869-nkn9kr'
+Command :: file -b --mime '/tmp/event-img420140821-13869-y7m2vr20140821-13869-nkn9kr'
+  [1m[35m (0.1ms)[0m  begin transaction
+Binary data inserted for `string` type on column `picture_content_type`
+  [1m[36mSQL (71.0ms)[0m  [1mINSERT INTO "events" ("content", "created_at", "event_date", "picture_content_type", "picture_file_name", "picture_file_size", "picture_updated_at", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["content", "qdfhqfh"], ["created_at", Thu, 21 Aug 2014 14:00:43 UTC +00:00], ["event_date", Thu, 21 Aug 2014 14:00:00 UTC +00:00], ["picture_content_type", "image/jpeg"], ["picture_file_name", "event-img4.jpg"], ["picture_file_size", 28006], ["picture_updated_at", Thu, 21 Aug 2014 14:00:42 UTC +00:00], ["title", "tommy"], ["updated_at", Thu, 21 Aug 2014 14:00:43 UTC +00:00]]
+  [1m[35m (282.1ms)[0m  commit transaction
+Redirected to http://localhost:3000/events/3
+Completed 302 Found in 1483.1ms (ActiveRecord: 353.2ms)
+
+
+Started GET "/events/3" for 127.0.0.1 at 2014-08-21 15:00:44 +0100
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mEvent Load (0.2ms)[0m  [1mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", "3"]]
+  Rendered events/show.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 36.4ms (Views: 34.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-21 15:00:44 +0100
+Served asset /application.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2014-08-21 15:00:44 +0100
+Served asset /style.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/events.css?body=1" for 127.0.0.1 at 2014-08-21 15:00:44 +0100
+Served asset /events.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-08-21 15:00:44 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/slider.css?body=1" for 127.0.0.1 at 2014-08-21 15:00:44 +0100
+Served asset /slider.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/swipebox.css?body=1" for 127.0.0.1 at 2014-08-21 15:00:44 +0100
+Served asset /swipebox.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-08-21 15:00:44 +0100
+Served asset /welcome.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-21 15:00:44 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-21 15:00:44 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at 2014-08-21 15:00:44 +0100
+Served asset /events.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ios-orientationchange-fix.js?body=1" for 127.0.0.1 at 2014-08-21 15:00:44 +0100
+Served asset /ios-orientationchange-fix.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.nivo.slider.js?body=1" for 127.0.0.1 at 2014-08-21 15:00:44 +0100
+Served asset /jquery.nivo.slider.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.swipebox.min.js?body=1" for 127.0.0.1 at 2014-08-21 15:00:44 +0100
+Served asset /jquery.swipebox.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-08-21 15:00:44 +0100
+Served asset /welcome.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-21 15:00:44 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2014-08-21 15:00:44 +0100
+Served asset /logo.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/f-icon.png" for 127.0.0.1 at 2014-08-21 15:00:44 +0100
+Served asset /f-icon.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foot-icon.png" for 127.0.0.1 at 2014-08-21 15:00:44 +0100
+Served asset /foot-icon.png - 304 Not Modified (0ms)
+
+
+Started GET "/events" for 127.0.0.1 at 2014-08-21 15:00:48 +0100
+Processing by EventsController#index as HTML
+  [1m[35mEvent Load (0.3ms)[0m  SELECT "events".* FROM "events" 
+  Rendered events/index.html.erb within layouts/application (23.3ms)
+Completed 200 OK in 39.7ms (Views: 37.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-21 15:00:48 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-08-21 15:00:48 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/events.css?body=1" for 127.0.0.1 at 2014-08-21 15:00:48 +0100
+Served asset /events.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/swipebox.css?body=1" for 127.0.0.1 at 2014-08-21 15:00:48 +0100
+Served asset /swipebox.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/slider.css?body=1" for 127.0.0.1 at 2014-08-21 15:00:48 +0100
+Served asset /slider.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2014-08-21 15:00:48 +0100
+Served asset /style.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-08-21 15:00:48 +0100
+Served asset /welcome.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-21 15:00:48 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-21 15:00:48 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at 2014-08-21 15:00:48 +0100
+Served asset /events.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ios-orientationchange-fix.js?body=1" for 127.0.0.1 at 2014-08-21 15:00:48 +0100
+Served asset /ios-orientationchange-fix.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.nivo.slider.js?body=1" for 127.0.0.1 at 2014-08-21 15:00:48 +0100
+Served asset /jquery.nivo.slider.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.swipebox.min.js?body=1" for 127.0.0.1 at 2014-08-21 15:00:48 +0100
+Served asset /jquery.swipebox.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-08-21 15:00:48 +0100
+Served asset /welcome.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-21 15:00:48 +0100
+Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2014-08-21 15:00:48 +0100
+Served asset /logo.png - 304 Not Modified (0ms)
+
+
+Started GET "/images/medium/missing.png" for 127.0.0.1 at 2014-08-21 15:00:48 +0100
+
+ActionController::RoutingError (No route matches [GET] "/images/medium/missing.png"):
+  actionpack (3.2.17) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.17) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.17) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.17) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.17) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.17) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.17) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.17) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.17) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.17) lib/rails/engine.rb:484:in `call'
+  railties (3.2.17) lib/rails/application.rb:231:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.17) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /home/bilel/.rvm/rubies/ruby-1.9.3-p545/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /home/bilel/.rvm/rubies/ruby-1.9.3-p545/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /home/bilel/.rvm/rubies/ruby-1.9.3-p545/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /home/bilel/.rvm/gems/ruby-1.9.3-p545/gems/actionpack-3.2.17/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/assets/foot-icon.png" for 127.0.0.1 at 2014-08-21 15:00:48 +0100
+Served asset /foot-icon.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/f-icon.png" for 127.0.0.1 at 2014-08-21 15:00:48 +0100
+Served asset /f-icon.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/images/bg.jpg" for 127.0.0.1 at 2014-08-21 15:00:48 +0100
+Served asset /images/bg.jpg - 200 OK (0ms)
+
+
+Started GET "/assets/fonts/CaviarDreams-webfont.ttf" for 127.0.0.1 at 2014-08-21 15:00:48 +0100
+Served asset /fonts/CaviarDreams-webfont.ttf - 200 OK (0ms)
+
+
+Started GET "/assets/images/marker.png" for 127.0.0.1 at 2014-08-21 15:00:49 +0100
+Served asset /images/marker.png - 200 OK (0ms)
+
+
+Started GET "/events" for 127.0.0.1 at 2014-08-21 15:02:26 +0100
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.3ms)[0m  [1mSELECT "events".* FROM "events" [0m
+  Rendered events/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 13.8ms (Views: 12.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-08-21 15:02:26 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/events.css?body=1" for 127.0.0.1 at 2014-08-21 15:02:26 +0100
+Served asset /events.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-21 15:02:26 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2014-08-21 15:02:26 +0100
+Served asset /style.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/slider.css?body=1" for 127.0.0.1 at 2014-08-21 15:02:26 +0100
+Served asset /slider.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/swipebox.css?body=1" for 127.0.0.1 at 2014-08-21 15:02:26 +0100
+Served asset /swipebox.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-08-21 15:02:26 +0100
+Served asset /welcome.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-21 15:02:26 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-21 15:02:26 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at 2014-08-21 15:02:26 +0100
+Served asset /events.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ios-orientationchange-fix.js?body=1" for 127.0.0.1 at 2014-08-21 15:02:26 +0100
+Served asset /ios-orientationchange-fix.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.nivo.slider.js?body=1" for 127.0.0.1 at 2014-08-21 15:02:26 +0100
+Served asset /jquery.nivo.slider.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.swipebox.min.js?body=1" for 127.0.0.1 at 2014-08-21 15:02:26 +0100
+Served asset /jquery.swipebox.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-08-21 15:02:26 +0100
+Served asset /welcome.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-21 15:02:26 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2014-08-21 15:02:26 +0100
+Served asset /logo.png - 304 Not Modified (0ms)
+
+
+Started GET "/images/medium/missing.png" for 127.0.0.1 at 2014-08-21 15:02:26 +0100
+
+ActionController::RoutingError (No route matches [GET] "/images/medium/missing.png"):
+  actionpack (3.2.17) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.17) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.17) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.17) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.17) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.17) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.17) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.17) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.17) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.17) lib/rails/engine.rb:484:in `call'
+  railties (3.2.17) lib/rails/application.rb:231:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.17) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /home/bilel/.rvm/rubies/ruby-1.9.3-p545/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /home/bilel/.rvm/rubies/ruby-1.9.3-p545/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /home/bilel/.rvm/rubies/ruby-1.9.3-p545/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /home/bilel/.rvm/gems/ruby-1.9.3-p545/gems/actionpack-3.2.17/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/assets/f-icon.png" for 127.0.0.1 at 2014-08-21 15:02:26 +0100
+Served asset /f-icon.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foot-icon.png" for 127.0.0.1 at 2014-08-21 15:02:26 +0100
+Served asset /foot-icon.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/images/bg.jpg" for 127.0.0.1 at 2014-08-21 15:02:26 +0100
+Served asset /images/bg.jpg - 200 OK (0ms)
+
+
+Started GET "/assets/images/marker.png" for 127.0.0.1 at 2014-08-21 15:02:26 +0100
+Served asset /images/marker.png - 200 OK (0ms)
+
+
+Started GET "/assets/fonts/CaviarDreams-webfont.ttf" for 127.0.0.1 at 2014-08-21 15:02:26 +0100
+Served asset /fonts/CaviarDreams-webfont.ttf - 200 OK (0ms)
+
+
+Started GET "/events" for 127.0.0.1 at 2014-08-21 15:05:38 +0100
+Processing by EventsController#index as HTML
+  [1m[35mEvent Load (0.1ms)[0m  SELECT "events".* FROM "events" 
+  Rendered events/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 23.9ms (Views: 11.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-21 15:05:38 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-08-21 15:05:38 +0100
+Served asset /welcome.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/events.css?body=1" for 127.0.0.1 at 2014-08-21 15:05:38 +0100
+Served asset /events.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/slider.css?body=1" for 127.0.0.1 at 2014-08-21 15:05:38 +0100
+Served asset /slider.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-08-21 15:05:38 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2014-08-21 15:05:38 +0100
+Served asset /style.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/swipebox.css?body=1" for 127.0.0.1 at 2014-08-21 15:05:38 +0100
+Served asset /swipebox.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-21 15:05:38 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-21 15:05:38 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at 2014-08-21 15:05:38 +0100
+Served asset /events.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/ios-orientationchange-fix.js?body=1" for 127.0.0.1 at 2014-08-21 15:05:38 +0100
+Served asset /ios-orientationchange-fix.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.nivo.slider.js?body=1" for 127.0.0.1 at 2014-08-21 15:05:38 +0100
+Served asset /jquery.nivo.slider.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.swipebox.min.js?body=1" for 127.0.0.1 at 2014-08-21 15:05:38 +0100
+Served asset /jquery.swipebox.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-08-21 15:05:38 +0100
+Served asset /welcome.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-21 15:05:38 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2014-08-21 15:05:38 +0100
+Served asset /logo.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/images/medium/missing.png" for 127.0.0.1 at 2014-08-21 15:05:38 +0100
+Served asset /images/medium/missing.png - 404 Not Found (2ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/images/medium/missing.png"):
+  actionpack (3.2.17) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.17) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.17) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.17) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.17) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.17) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.17) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.17) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.17) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.17) lib/rails/engine.rb:484:in `call'
+  railties (3.2.17) lib/rails/application.rb:231:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.17) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /home/bilel/.rvm/rubies/ruby-1.9.3-p545/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /home/bilel/.rvm/rubies/ruby-1.9.3-p545/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /home/bilel/.rvm/rubies/ruby-1.9.3-p545/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /home/bilel/.rvm/gems/ruby-1.9.3-p545/gems/actionpack-3.2.17/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/assets/foot-icon.png" for 127.0.0.1 at 2014-08-21 15:05:38 +0100
+Served asset /foot-icon.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/f-icon.png" for 127.0.0.1 at 2014-08-21 15:05:38 +0100
+Served asset /f-icon.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/images/bg.jpg" for 127.0.0.1 at 2014-08-21 15:05:38 +0100
+Served asset /images/bg.jpg - 200 OK (0ms)
+
+
+Started GET "/assets/fonts/CaviarDreams-webfont.ttf" for 127.0.0.1 at 2014-08-21 15:05:38 +0100
+Served asset /fonts/CaviarDreams-webfont.ttf - 200 OK (0ms)
+
+
+Started GET "/assets/images/marker.png" for 127.0.0.1 at 2014-08-21 15:05:38 +0100
+Served asset /images/marker.png - 200 OK (0ms)
+
+
+Started GET "/events/1" for 127.0.0.1 at 2014-08-21 15:07:10 +0100
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEvent Load (0.4ms)[0m  [1mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered events/show.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 14.7ms (Views: 11.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-21 15:07:10 +0100
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-08-21 15:07:10 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/events.css?body=1" for 127.0.0.1 at 2014-08-21 15:07:10 +0100
+Served asset /events.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/swipebox.css?body=1" for 127.0.0.1 at 2014-08-21 15:07:10 +0100
+Served asset /swipebox.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2014-08-21 15:07:10 +0100
+Served asset /style.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/slider.css?body=1" for 127.0.0.1 at 2014-08-21 15:07:10 +0100
+Served asset /slider.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-08-21 15:07:10 +0100
+Served asset /welcome.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-21 15:07:10 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-21 15:07:10 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at 2014-08-21 15:07:10 +0100
+Served asset /events.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ios-orientationchange-fix.js?body=1" for 127.0.0.1 at 2014-08-21 15:07:10 +0100
+Served asset /ios-orientationchange-fix.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.nivo.slider.js?body=1" for 127.0.0.1 at 2014-08-21 15:07:10 +0100
+Served asset /jquery.nivo.slider.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.swipebox.min.js?body=1" for 127.0.0.1 at 2014-08-21 15:07:10 +0100
+Served asset /jquery.swipebox.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-08-21 15:07:10 +0100
+Served asset /welcome.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-21 15:07:10 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2014-08-21 15:07:10 +0100
+Served asset /logo.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/f-icon.png" for 127.0.0.1 at 2014-08-21 15:07:10 +0100
+Served asset /f-icon.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foot-icon.png" for 127.0.0.1 at 2014-08-21 15:07:10 +0100
+Served asset /foot-icon.png - 304 Not Modified (0ms)
+
+
+Started GET "/events/1/edit" for 127.0.0.1 at 2014-08-21 15:07:14 +0100
+Processing by EventsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mEvent Load (0.2ms)[0m  SELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered events/_form.html.erb (9.6ms)
+  Rendered events/edit.html.erb within layouts/application (11.9ms)
+Completed 200 OK in 33.7ms (Views: 32.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-21 15:07:14 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/slider.css?body=1" for 127.0.0.1 at 2014-08-21 15:07:14 +0100
+Served asset /slider.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-08-21 15:07:14 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/events.css?body=1" for 127.0.0.1 at 2014-08-21 15:07:14 +0100
+Served asset /events.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2014-08-21 15:07:14 +0100
+Served asset /style.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/swipebox.css?body=1" for 127.0.0.1 at 2014-08-21 15:07:14 +0100
+Served asset /swipebox.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-08-21 15:07:14 +0100
+Served asset /welcome.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-21 15:07:14 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-21 15:07:14 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at 2014-08-21 15:07:14 +0100
+Served asset /events.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.nivo.slider.js?body=1" for 127.0.0.1 at 2014-08-21 15:07:14 +0100
+Served asset /jquery.nivo.slider.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ios-orientationchange-fix.js?body=1" for 127.0.0.1 at 2014-08-21 15:07:14 +0100
+Served asset /ios-orientationchange-fix.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.swipebox.min.js?body=1" for 127.0.0.1 at 2014-08-21 15:07:14 +0100
+Served asset /jquery.swipebox.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-08-21 15:07:14 +0100
+Served asset /welcome.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-21 15:07:14 +0100
+Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2014-08-21 15:07:14 +0100
+Served asset /logo.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/f-icon.png" for 127.0.0.1 at 2014-08-21 15:07:14 +0100
+Served asset /f-icon.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foot-icon.png" for 127.0.0.1 at 2014-08-21 15:07:14 +0100
+Served asset /foot-icon.png - 304 Not Modified (0ms)
+
+
+Started PUT "/events/1" for 127.0.0.1 at 2014-08-21 15:07:22 +0100
+Processing by EventsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"G8lnqxgWojeBcHhlUsqqtZKXXrAHPwbjkKeQcINIHjI=", "event"=>{"title"=>"tieto in borabbora", "content"=>"lorem ipsu", "event_date(1i)"=>"2014", "event_date(2i)"=>"8", "event_date(3i)"=>"22", "event_date(4i)"=>"22", "event_date(5i)"=>"00", "picture"=>#<ActionDispatch::Http::UploadedFile:0xb6244f80 @original_filename="event-img1.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"event[picture]\"; filename=\"event-img1.jpg\"\r\nContent-Type: image/jpeg\r\n", @tempfile=#<File:/tmp/RackMultipart20140821-13869-miy0ve>>}, "commit"=>"Update Event", "id"=>"1"}
+  [1m[36mEvent Load (0.2ms)[0m  [1mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/event-img120140821-13869-a79bzc.jpg[0]'
+Command :: identify -format %m '/tmp/event-img120140821-13869-a79bzc.jpg[0]'
+Command :: identify -format %m '/tmp/event-img120140821-13869-a79bzc.jpg[0]'
+Command :: identify -format %m '/tmp/event-img120140821-13869-a79bzc.jpg[0]'
+Command :: convert '/tmp/event-img120140821-13869-a79bzc.jpg[0]' -auto-orient -resize "300x300>" '/tmp/event-img120140821-13869-a79bzc20140821-13869-z0z39i'
+Command :: file -b --mime '/tmp/event-img120140821-13869-a79bzc20140821-13869-z0z39i'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/event-img120140821-13869-a79bzc.jpg[0]'
+Command :: identify -format %m '/tmp/event-img120140821-13869-a79bzc.jpg[0]'
+Command :: identify -format %m '/tmp/event-img120140821-13869-a79bzc.jpg[0]'
+Command :: identify -format %m '/tmp/event-img120140821-13869-a79bzc.jpg[0]'
+Command :: convert '/tmp/event-img120140821-13869-a79bzc.jpg[0]' -auto-orient -resize "100x100>" '/tmp/event-img120140821-13869-a79bzc20140821-13869-143jxmc'
+Command :: file -b --mime '/tmp/event-img120140821-13869-a79bzc20140821-13869-143jxmc'
+  [1m[36m (0.3ms)[0m  [1mUPDATE "events" SET "picture_file_name" = 'event-img1.jpg', "picture_content_type" = 'image/jpeg', "picture_file_size" = 46437, "picture_updated_at" = '2014-08-21 14:07:22.330998', "updated_at" = '2014-08-21 14:07:22.882257' WHERE "events"."id" = 1[0m
+  [1m[35m (239.3ms)[0m  commit transaction
+Redirected to http://localhost:3000/events/1
+Completed 302 Found in 809.9ms (ActiveRecord: 239.9ms)
+
+
+Started GET "/events/1" for 127.0.0.1 at 2014-08-21 15:07:23 +0100
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEvent Load (0.2ms)[0m  [1mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered events/show.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 21.3ms (Views: 19.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-21 15:07:23 +0100
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-08-21 15:07:23 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/events.css?body=1" for 127.0.0.1 at 2014-08-21 15:07:23 +0100
+Served asset /events.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/slider.css?body=1" for 127.0.0.1 at 2014-08-21 15:07:23 +0100
+Served asset /slider.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2014-08-21 15:07:23 +0100
+Served asset /style.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/swipebox.css?body=1" for 127.0.0.1 at 2014-08-21 15:07:23 +0100
+Served asset /swipebox.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-21 15:07:23 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-08-21 15:07:23 +0100
+Served asset /welcome.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at 2014-08-21 15:07:23 +0100
+Served asset /events.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-21 15:07:23 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.nivo.slider.js?body=1" for 127.0.0.1 at 2014-08-21 15:07:23 +0100
+Served asset /jquery.nivo.slider.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.swipebox.min.js?body=1" for 127.0.0.1 at 2014-08-21 15:07:23 +0100
+Served asset /jquery.swipebox.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-08-21 15:07:23 +0100
+Served asset /welcome.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ios-orientationchange-fix.js?body=1" for 127.0.0.1 at 2014-08-21 15:07:23 +0100
+Served asset /ios-orientationchange-fix.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-21 15:07:23 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2014-08-21 15:07:23 +0100
+Served asset /logo.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/f-icon.png" for 127.0.0.1 at 2014-08-21 15:07:23 +0100
+Served asset /f-icon.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foot-icon.png" for 127.0.0.1 at 2014-08-21 15:07:23 +0100
+Served asset /foot-icon.png - 304 Not Modified (0ms)
+
+
+Started GET "/events" for 127.0.0.1 at 2014-08-21 15:07:25 +0100
+Processing by EventsController#index as HTML
+  [1m[35mEvent Load (0.2ms)[0m  SELECT "events".* FROM "events" 
+  Rendered events/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 11.8ms (Views: 10.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-21 15:07:25 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/slider.css?body=1" for 127.0.0.1 at 2014-08-21 15:07:25 +0100
+Served asset /slider.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2014-08-21 15:07:25 +0100
+Served asset /style.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/events.css?body=1" for 127.0.0.1 at 2014-08-21 15:07:25 +0100
+Served asset /events.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-08-21 15:07:25 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/swipebox.css?body=1" for 127.0.0.1 at 2014-08-21 15:07:25 +0100
+Served asset /swipebox.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-08-21 15:07:25 +0100
+Served asset /welcome.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-21 15:07:25 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-21 15:07:25 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at 2014-08-21 15:07:25 +0100
+Served asset /events.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ios-orientationchange-fix.js?body=1" for 127.0.0.1 at 2014-08-21 15:07:25 +0100
+Served asset /ios-orientationchange-fix.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.nivo.slider.js?body=1" for 127.0.0.1 at 2014-08-21 15:07:25 +0100
+Served asset /jquery.nivo.slider.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.swipebox.min.js?body=1" for 127.0.0.1 at 2014-08-21 15:07:25 +0100
+Served asset /jquery.swipebox.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-08-21 15:07:25 +0100
+Served asset /welcome.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2014-08-21 15:07:25 +0100
+Served asset /logo.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-21 15:07:25 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/images/medium/missing.png" for 127.0.0.1 at 2014-08-21 15:07:25 +0100
+Served asset /images/medium/missing.png - 404 Not Found (3ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/images/medium/missing.png"):
+  actionpack (3.2.17) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.17) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.17) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.17) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.17) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.17) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.17) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.17) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.17) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.17) lib/rails/engine.rb:484:in `call'
+  railties (3.2.17) lib/rails/application.rb:231:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.17) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /home/bilel/.rvm/rubies/ruby-1.9.3-p545/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /home/bilel/.rvm/rubies/ruby-1.9.3-p545/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /home/bilel/.rvm/rubies/ruby-1.9.3-p545/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /home/bilel/.rvm/gems/ruby-1.9.3-p545/gems/actionpack-3.2.17/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.1ms)
+
+
+Started GET "/assets/f-icon.png" for 127.0.0.1 at 2014-08-21 15:07:25 +0100
+Served asset /f-icon.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foot-icon.png" for 127.0.0.1 at 2014-08-21 15:07:25 +0100
+Served asset /foot-icon.png - 304 Not Modified (0ms)
+
+
+Started GET "/events/2" for 127.0.0.1 at 2014-08-21 15:07:27 +0100
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mEvent Load (0.1ms)[0m  [1mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", "2"]]
+  Rendered events/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 10.3ms (Views: 8.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-21 15:07:27 +0100
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2014-08-21 15:07:27 +0100
+Served asset /style.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/events.css?body=1" for 127.0.0.1 at 2014-08-21 15:07:27 +0100
+Served asset /events.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/slider.css?body=1" for 127.0.0.1 at 2014-08-21 15:07:27 +0100
+Served asset /slider.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/swipebox.css?body=1" for 127.0.0.1 at 2014-08-21 15:07:27 +0100
+Served asset /swipebox.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-08-21 15:07:27 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-08-21 15:07:27 +0100
+Served asset /welcome.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-21 15:07:27 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-21 15:07:27 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at 2014-08-21 15:07:27 +0100
+Served asset /events.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ios-orientationchange-fix.js?body=1" for 127.0.0.1 at 2014-08-21 15:07:27 +0100
+Served asset /ios-orientationchange-fix.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.nivo.slider.js?body=1" for 127.0.0.1 at 2014-08-21 15:07:27 +0100
+Served asset /jquery.nivo.slider.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.swipebox.min.js?body=1" for 127.0.0.1 at 2014-08-21 15:07:27 +0100
+Served asset /jquery.swipebox.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-21 15:07:27 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-08-21 15:07:27 +0100
+Served asset /welcome.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2014-08-21 15:07:27 +0100
+Served asset /logo.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/f-icon.png" for 127.0.0.1 at 2014-08-21 15:07:27 +0100
+Served asset /f-icon.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foot-icon.png" for 127.0.0.1 at 2014-08-21 15:07:27 +0100
+Served asset /foot-icon.png - 304 Not Modified (0ms)
+
+
+Started GET "/events/2/edit" for 127.0.0.1 at 2014-08-21 15:07:29 +0100
+Processing by EventsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mEvent Load (0.1ms)[0m  SELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", "2"]]
+  Rendered events/_form.html.erb (8.0ms)
+  Rendered events/edit.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 16.6ms (Views: 15.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-21 15:07:29 +0100
+Served asset /application.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2014-08-21 15:07:29 +0100
+Served asset /style.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/events.css?body=1" for 127.0.0.1 at 2014-08-21 15:07:29 +0100
+Served asset /events.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-08-21 15:07:29 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/slider.css?body=1" for 127.0.0.1 at 2014-08-21 15:07:29 +0100
+Served asset /slider.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/swipebox.css?body=1" for 127.0.0.1 at 2014-08-21 15:07:29 +0100
+Served asset /swipebox.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-08-21 15:07:29 +0100
+Served asset /welcome.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-21 15:07:29 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-21 15:07:29 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at 2014-08-21 15:07:29 +0100
+Served asset /events.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ios-orientationchange-fix.js?body=1" for 127.0.0.1 at 2014-08-21 15:07:29 +0100
+Served asset /ios-orientationchange-fix.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.nivo.slider.js?body=1" for 127.0.0.1 at 2014-08-21 15:07:29 +0100
+Served asset /jquery.nivo.slider.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-08-21 15:07:29 +0100
+Served asset /welcome.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.swipebox.min.js?body=1" for 127.0.0.1 at 2014-08-21 15:07:29 +0100
+Served asset /jquery.swipebox.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-21 15:07:29 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2014-08-21 15:07:29 +0100
+Served asset /logo.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/f-icon.png" for 127.0.0.1 at 2014-08-21 15:07:29 +0100
+Served asset /f-icon.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foot-icon.png" for 127.0.0.1 at 2014-08-21 15:07:29 +0100
+Served asset /foot-icon.png - 304 Not Modified (0ms)
+
+
+Started PUT "/events/2" for 127.0.0.1 at 2014-08-21 15:07:34 +0100
+Processing by EventsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"G8lnqxgWojeBcHhlUsqqtZKXXrAHPwbjkKeQcINIHjI=", "event"=>{"title"=>"david getta soon", "content"=>"edùkùl", "event_date(1i)"=>"2014", "event_date(2i)"=>"8", "event_date(3i)"=>"23", "event_date(4i)"=>"22", "event_date(5i)"=>"00", "picture"=>#<ActionDispatch::Http::UploadedFile:0xb62a4458 @original_filename="event-img2.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"event[picture]\"; filename=\"event-img2.jpg\"\r\nContent-Type: image/jpeg\r\n", @tempfile=#<File:/tmp/RackMultipart20140821-13869-lbsu7r>>}, "commit"=>"Update Event", "id"=>"2"}
+  [1m[36mEvent Load (0.2ms)[0m  [1mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", "2"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/event-img220140821-13869-12v0tuf.jpg[0]'
+Command :: identify -format %m '/tmp/event-img220140821-13869-12v0tuf.jpg[0]'
+Command :: identify -format %m '/tmp/event-img220140821-13869-12v0tuf.jpg[0]'
+Command :: identify -format %m '/tmp/event-img220140821-13869-12v0tuf.jpg[0]'
+Command :: convert '/tmp/event-img220140821-13869-12v0tuf.jpg[0]' -auto-orient -resize "300x300>" '/tmp/event-img220140821-13869-12v0tuf20140821-13869-l5hanh'
+Command :: file -b --mime '/tmp/event-img220140821-13869-12v0tuf20140821-13869-l5hanh'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/event-img220140821-13869-12v0tuf.jpg[0]'
+Command :: identify -format %m '/tmp/event-img220140821-13869-12v0tuf.jpg[0]'
+Command :: identify -format %m '/tmp/event-img220140821-13869-12v0tuf.jpg[0]'
+Command :: identify -format %m '/tmp/event-img220140821-13869-12v0tuf.jpg[0]'
+Command :: convert '/tmp/event-img220140821-13869-12v0tuf.jpg[0]' -auto-orient -resize "100x100>" '/tmp/event-img220140821-13869-12v0tuf20140821-13869-3nq24w'
+Command :: file -b --mime '/tmp/event-img220140821-13869-12v0tuf20140821-13869-3nq24w'
+  [1m[36m (0.3ms)[0m  [1mUPDATE "events" SET "picture_file_name" = 'event-img2.jpg', "picture_content_type" = 'image/jpeg', "picture_file_size" = 39983, "picture_updated_at" = '2014-08-21 14:07:34.844345', "updated_at" = '2014-08-21 14:07:35.109844' WHERE "events"."id" = 2[0m
+  [1m[35m (162.6ms)[0m  commit transaction
+Redirected to http://localhost:3000/events/2
+Completed 302 Found in 444.6ms (ActiveRecord: 163.1ms)
+
+
+Started GET "/events/2" for 127.0.0.1 at 2014-08-21 15:07:35 +0100
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mEvent Load (0.2ms)[0m  [1mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", "2"]]
+  Rendered events/show.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 15.9ms (Views: 14.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-21 15:07:35 +0100
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/swipebox.css?body=1" for 127.0.0.1 at 2014-08-21 15:07:35 +0100
+Served asset /swipebox.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2014-08-21 15:07:35 +0100
+Served asset /style.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/slider.css?body=1" for 127.0.0.1 at 2014-08-21 15:07:35 +0100
+Served asset /slider.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/events.css?body=1" for 127.0.0.1 at 2014-08-21 15:07:35 +0100
+Served asset /events.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-08-21 15:07:35 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-08-21 15:07:35 +0100
+Served asset /welcome.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-21 15:07:35 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-21 15:07:35 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ios-orientationchange-fix.js?body=1" for 127.0.0.1 at 2014-08-21 15:07:35 +0100
+Served asset /ios-orientationchange-fix.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at 2014-08-21 15:07:35 +0100
+Served asset /events.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.nivo.slider.js?body=1" for 127.0.0.1 at 2014-08-21 15:07:35 +0100
+Served asset /jquery.nivo.slider.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.swipebox.min.js?body=1" for 127.0.0.1 at 2014-08-21 15:07:35 +0100
+Served asset /jquery.swipebox.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-08-21 15:07:35 +0100
+Served asset /welcome.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-21 15:07:35 +0100
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2014-08-21 15:07:35 +0100
+Served asset /logo.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/f-icon.png" for 127.0.0.1 at 2014-08-21 15:07:35 +0100
+Served asset /f-icon.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foot-icon.png" for 127.0.0.1 at 2014-08-21 15:07:35 +0100
+Served asset /foot-icon.png - 304 Not Modified (0ms)
+
+
+Started GET "/events" for 127.0.0.1 at 2014-08-21 15:07:37 +0100
+Processing by EventsController#index as HTML
+  [1m[35mEvent Load (0.3ms)[0m  SELECT "events".* FROM "events" 
+  Rendered events/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 13.6ms (Views: 11.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-21 15:07:37 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/events.css?body=1" for 127.0.0.1 at 2014-08-21 15:07:37 +0100
+Served asset /events.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-08-21 15:07:37 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2014-08-21 15:07:37 +0100
+Served asset /style.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/slider.css?body=1" for 127.0.0.1 at 2014-08-21 15:07:37 +0100
+Served asset /slider.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-08-21 15:07:37 +0100
+Served asset /welcome.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/swipebox.css?body=1" for 127.0.0.1 at 2014-08-21 15:07:37 +0100
+Served asset /swipebox.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-21 15:07:37 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-21 15:07:37 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at 2014-08-21 15:07:37 +0100
+Served asset /events.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ios-orientationchange-fix.js?body=1" for 127.0.0.1 at 2014-08-21 15:07:37 +0100
+Served asset /ios-orientationchange-fix.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.swipebox.min.js?body=1" for 127.0.0.1 at 2014-08-21 15:07:37 +0100
+Served asset /jquery.swipebox.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.nivo.slider.js?body=1" for 127.0.0.1 at 2014-08-21 15:07:37 +0100
+Served asset /jquery.nivo.slider.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-08-21 15:07:37 +0100
+Served asset /welcome.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-21 15:07:37 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2014-08-21 15:07:37 +0100
+Served asset /logo.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/f-icon.png" for 127.0.0.1 at 2014-08-21 15:07:37 +0100
+Served asset /f-icon.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foot-icon.png" for 127.0.0.1 at 2014-08-21 15:07:37 +0100
+Served asset /foot-icon.png - 304 Not Modified (0ms)

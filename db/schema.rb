@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140821133303) do
+ActiveRecord::Schema.define(:version => 20140821151555) do
 
   create_table "events", :force => true do |t|
     t.string   "title"
@@ -23,6 +23,15 @@ ActiveRecord::Schema.define(:version => 20140821133303) do
     t.string   "picture_content_type"
     t.integer  "picture_file_size"
     t.datetime "picture_updated_at"
+  end
+
+  create_table "mails", :force => true do |t|
+    t.string   "title"
+    t.string   "mail"
+    t.text     "content"
+    t.boolean  "read_it"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
 end

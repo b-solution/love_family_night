@@ -1,4 +1,6 @@
 LoveFamilyNight::Application.routes.draw do
+  get "contact/index"
+
   resources :events
 
 

@@ -1,0 +1,27 @@
+
+<div class="main">
+  <div class="wrap">
+    <div class="content_top">
+      <div class="events">
+        <h2>Upcomming Events</h2>
+        <div class="section group">
+        <% @events.each_with_index do |event,index| %>
+            <% if index%3 == 0 and index >0 %>
+                 </div><div class="section group">
+             <% end %>
+            <div class="grid_1_of_3 events_1_of_3">
+              <div class="event-time">
+                <h4><span><%= event.title %></span></h4>
+                <h4><%= event.event_date %></h4>
+              </div>
+              <div class="event-img">
+                <%= link_to image_tag( "event-img1.jpg" , :alt=>""), event_path(event.id)%><span>Read More</span></a>
+              </div>
+            </div>
+       <% end %>
+        </div>>
+
+      </div>
+    </div>
+  </div>
+</div>

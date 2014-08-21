@@ -1,4 +1,9 @@
 LoveFamilyNight::Application.routes.draw do
+  resources :events
+
+
+  get "events/index"
+
   get "welcome/index"
   root :to=> "welcome#index"
   match ":controller/:action"
